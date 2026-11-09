@@ -1,0 +1,12 @@
+name: tee-inference
+version: 0.1.0
+evidence_class: forge-artifact
+display: "TEE-attested inference/work receipts"
+description: "Verifies a NEAR AI Cloud (provider_tee) signed completion: fetches the provider's signature record for the chat id and binds model + nonce + request hash to the market params. Honest limit: attestation proves WHICH model ran the exact bytes — not that the answer was right."
+ref_format: "near-ai signature id (the chat completion id), or '<id>|<prompt_sha256>'"
+actor_binding: "the tee signature binds request bytes to the provider key — actor is whoever submitted"
+env_required: []
+env_optional: [NEAR_AI_BASE, NEAR_AI_API_KEY]
+determinism: deterministic
+entry: index.ts
+author: TerexitariusStomp

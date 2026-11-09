@@ -1,0 +1,9 @@
+{
+  "desc": "fail-closed: market requires crypto, verifier not installed",
+  "input": {
+    "market": { "id": "m-zk-1", "verification": { "class": "platform-url", "params": { "host": "api.x.com" } } },
+    "claim": { "ref": "inline:{\"session\":{\"server_name\":\"api.x.com\"},\"time\":9999999999}", "actor": "a" }
+  },
+  "mocks": {},
+  "expect": { "failures": "verifier not installed" }
+}

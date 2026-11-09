@@ -1,0 +1,11 @@
+{
+  "desc": "structural-only acceptance when market declares require_crypto:false",
+  "input": {
+    "market": { "id": "m-zk-1", "verification": { "class": "platform-url",
+      "params": { "host": "api.x.com", "require_crypto": false, "transcript_contains": ["impression_count"] } } },
+    "claim": { "ref": "inline:{\"session\":{\"server_name\":\"api.x.com\"},\"transcript\":{\"recv\":\"{\\\"impression_count\\\":12000}\"},\"notary_url\":\"notary.example.com\",\"time\":9999999999}", "actor": "a" }
+  },
+  "mocks": {},
+  "expect": { "failures": "none" },
+  "evidence_keys": ["host", "proof_sha256", "verification_level", "verified", "verdict_authority"]
+}

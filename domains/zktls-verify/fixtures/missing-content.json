@@ -1,0 +1,9 @@
+{
+  "input": {
+    "market": { "id": "m-zk-1", "verification": { "class": "platform-url",
+      "params": { "host": "api.x.com", "transcript_contains": ["impression_count"] } } },
+    "claim": { "ref": "inline:{\"session\":{\"server_name\":\"api.x.com\"},\"transcript\":{\"recv\":\"{}\"},\"time\":9999999999}", "actor": "a" }
+  },
+  "mocks": {},
+  "expect": { "failures": "transcript missing" }
+}

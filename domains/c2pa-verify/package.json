@@ -1,0 +1,11 @@
+{
+  "name": "@widespread/domain-c2pa-verify",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "dependencies": { "@widespread/protocol-sdk": "workspace:*" },
+  "peerDependencies": { "@contentauth/c2pa-web": "*" },
+  "peerDependenciesMeta": { "@contentauth/c2pa-web": { "optional": true } },
+  "scripts": { "typecheck": "tsc -p tsconfig.json" },
+  "devDependencies": { "typescript": "^5.6.0", "@types/node": "^22.0.0" }
+}

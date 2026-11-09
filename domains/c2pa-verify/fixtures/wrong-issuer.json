@@ -1,0 +1,9 @@
+{
+  "input": {
+    "market": { "id": "m-c2-1", "verification": { "class": "platform-url",
+      "params": { "issuer": "Acme Creative", "require_crypto": false } } },
+    "claim": { "ref": "inline:{\"manifests\":{\"m1\":{\"signature\":{\"issuer\":\"Attacker\"}}}}", "actor": "a" }
+  },
+  "mocks": {},
+  "expect": { "failures": "Acme Creative" }
+}

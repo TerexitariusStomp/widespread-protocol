@@ -1,0 +1,11 @@
+{
+  "desc": "signed manifest parses, issuer matches, structural mode",
+  "input": {
+    "market": { "id": "m-c2-1", "verification": { "class": "platform-url",
+      "params": { "issuer": "Acme Creative", "require_crypto": false } } },
+    "claim": { "ref": "inline:{\"active_manifest\":\"m1\",\"manifests\":{\"m1\":{\"signature\":{\"issuer\":\"Acme Creative\"},\"claim_generator\":\"adobe\"}}}", "actor": "a" }
+  },
+  "mocks": {},
+  "expect": { "failures": "none" },
+  "evidence_keys": ["issuer", "manifest_sha256", "verification_level", "verified", "verdict_authority"]
+}

@@ -1,0 +1,5 @@
+{
+  "input": { "market": { "id": "m-tee-1" }, "claim": { "ref": "chatcmpl-xyz", "actor": "a" } },
+  "mocks": { "cloud-api.near.ai/v1/signature/chatcmpl-xyz": { "json": { "model": "m" } } },
+  "expect": { "failures": "replayed" }
+}

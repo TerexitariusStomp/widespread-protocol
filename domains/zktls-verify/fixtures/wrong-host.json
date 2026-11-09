@@ -1,0 +1,8 @@
+{
+  "input": {
+    "market": { "id": "m-zk-1", "verification": { "class": "platform-url", "params": { "host": "api.x.com" } } },
+    "claim": { "ref": "inline:{\"session\":{\"server_name\":\"evil.example.com\"},\"time\":1731000000}", "actor": "a" }
+  },
+  "mocks": {},
+  "expect": { "failures": "host" }
+}

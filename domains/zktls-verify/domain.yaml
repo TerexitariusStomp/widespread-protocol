@@ -1,0 +1,12 @@
+name: zktls-verify
+version: 0.1.0
+evidence_class: platform-url
+display: "zkTLS proof-carrying web evidence"
+description: "Verifies a TLSNotary/zkTLS presentation proving an HTTPS response came from a declared host — platform-url evidence upgraded from 'we fetched it' to 'cryptographically proven to come from the host'."
+ref_format: "inline:<base64-or-json presentation> — the TLSNotary presentation payload"
+actor_binding: "proof-bound — the transcript is signed by the notary; actor recorded"
+env_required: []
+env_optional: []   # peer dep 'tlsn-js' for real verification
+determinism: deterministic
+entry: index.ts
+author: TerexitariusStomp

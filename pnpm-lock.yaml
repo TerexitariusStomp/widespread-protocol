@@ -24,6 +24,22 @@ importers:
         specifier: workspace:*
         version: link:../../sdk
 
+  domains/c2pa-verify:
+    dependencies:
+      '@contentauth/c2pa-web':
+        specifier: '*'
+        version: 0.16.0
+      '@widespread/protocol-sdk':
+        specifier: workspace:*
+        version: link:../../sdk
+    devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.20.5
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.3
+
   domains/github-pr:
     dependencies:
       '@widespread/protocol-sdk':
@@ -89,11 +105,40 @@ importers:
         specifier: ^5.6.0
         version: 5.9.3
 
+  domains/tee-inference:
+    dependencies:
+      '@widespread/protocol-sdk':
+        specifier: workspace:*
+        version: link:../../sdk
+    devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.20.5
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.3
+
   domains/x-marketing:
     dependencies:
       '@widespread/protocol-sdk':
         specifier: workspace:*
         version: link:../../sdk
+    devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.20.5
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.3
+
+  domains/zktls-verify:
+    dependencies:
+      '@widespread/protocol-sdk':
+        specifier: workspace:*
+        version: link:../../sdk
+      tlsn-js:
+        specifier: '*'
+        version: 0.0.2
     devDependencies:
       '@types/node':
         specifier: ^22.0.0
@@ -113,8 +158,35 @@ importers:
 
 packages:
 
+  '@contentauth/c2pa-types@0.7.8':
+    resolution: {integrity: sha512-wqvnS6Ms3FRMUlkBeHorSH4sJXpTx2kB5XcNRnzUcoechTJSoB/cjUVyxExMboN7ujUNPIHcIrtXWTms1A01XA==}
+
+  '@contentauth/c2pa-utilities@0.4.0':
+    resolution: {integrity: sha512-SnYvP1fZS+rKTXiad6Yj0kzOeI4YBhZC2E8zzsx0DPRE/ax02b+HwruphC+sIh5h8jhyw8qkAX/uJPKLarV/LA==}
+
+  '@contentauth/c2pa-wasm@0.14.0':
+    resolution: {integrity: sha512-vf4zqvhbMefyeOxPIpF/FwSLu3szvgmyAZ12YrRFVWQ+OlxzKSgAxEqU15DVNW+0uedxcut8xvivApmuwD2tBg==}
+
+  '@contentauth/c2pa-web@0.16.0':
+    resolution: {integrity: sha512-FEvdoYxejhSMtQ0Z0EwUM2S+6StjAWGcLHMi8eqFvzkXIKwW/2f/A+N8HRsTno8RPj8oNx1g5GFBjPw3uSQPzQ==}
+
   '@types/node@22.20.5':
     resolution: {integrity: sha512-U2+DNr+wSjpsTS/wZGYHq7GcwfuSmKiKvoPvK22zwTlRhU91yOniN4qRR5KhIjvif7ysw/dz/hKmfDH0Ris4aA==}
+
+  comlink@4.4.2:
+    resolution: {integrity: sha512-OxGdvBmJuNKSCMO4NTl1L47VRp6xn2wG4F/2hYzB6tiCb709otOxtEYCSvK80PtjODfXXZu8ds+Nw5kVCjqd2g==}
+
+  highgain@0.1.0:
+    resolution: {integrity: sha512-Vw/g2upw4MYLZ9e95k79+idMoPFEKvTQVTce9LCDfI+T6AiG+SdiR4WDKszB1grQy0O+uhxd6cqbdi3VhECdbA==}
+
+  tlsn-js@0.0.2:
+    resolution: {integrity: sha512-/Tdv9B4nfUmwhhN7Qt66sWymmVeKVkAy1GXQcsCITyiacZdVgTYa1WKLyLRvcHQWVQThJJ1KDuPlT5yC+UKWVA==}
+    engines: {node: '>= 16.20.2'}
+    deprecated: 'This package is deprecated. Check the tlsn-extension repository instead: https://github.com/tlsnotary/tlsn-extension'
+
+  ts-deepmerge@8.0.0:
+    resolution: {integrity: sha512-133O+10nJmVI8w5xeVZPEv5PIrv7iaUae07wv1aH8XJH95Ur6YIhWAPhPyP1YPlbPS9fCVcNIZTu7m8urRVF0A==}
+    engines: {node: '>=14.13.1'}
 
   typescript@5.9.3:
     resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
@@ -131,9 +203,35 @@ packages:
 
 snapshots:
 
+  '@contentauth/c2pa-types@0.7.8': {}
+
+  '@contentauth/c2pa-utilities@0.4.0':
+    dependencies:
+      '@contentauth/c2pa-types': 0.7.8
+      ts-deepmerge: 8.0.0
+
+  '@contentauth/c2pa-wasm@0.14.0': {}
+
+  '@contentauth/c2pa-web@0.16.0':
+    dependencies:
+      '@contentauth/c2pa-types': 0.7.8
+      '@contentauth/c2pa-utilities': 0.4.0
+      '@contentauth/c2pa-wasm': 0.14.0
+      highgain: 0.1.0
+
   '@types/node@22.20.5':
     dependencies:
       undici-types: 6.21.0
+
+  comlink@4.4.2: {}
+
+  highgain@0.1.0: {}
+
+  tlsn-js@0.0.2:
+    dependencies:
+      comlink: 4.4.2
+
+  ts-deepmerge@8.0.0: {}
 
   typescript@5.9.3: {}
 

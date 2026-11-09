@@ -1,0 +1,12 @@
+name: c2pa-verify
+version: 0.1.0
+evidence_class: platform-url
+display: "C2PA content-provenance verification"
+description: "Verifies signed C2PA manifests (Content Credentials) on media/design deliverables — provenance chain, issuer, active manifest signature fields. Crypto verify via optional @contentauth/c2pa-web peer."
+ref_format: "URL of the asset or its .c2pa sidecar manifest"
+actor_binding: "manifest signer — recorded; the signer's certificate chain is the identity"
+env_required: []
+env_optional: []
+determinism: deterministic
+entry: index.ts
+author: TerexitariusStomp

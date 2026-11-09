@@ -1,0 +1,13 @@
+{
+  "desc": "signature record resolves, model matches, nonce bound",
+  "input": {
+    "market": { "id": "m-tee-1", "verification": { "class": "forge-artifact",
+      "params": { "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017", "nonce_hash": "abc123" } } },
+    "claim": { "ref": "chatcmpl-xyz|abc123", "actor": "agent-9" }
+  },
+  "mocks": {
+    "cloud-api.near.ai/v1/signature/chatcmpl-xyz": { "json": { "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017", "sig": "ed25519:…" } }
+  },
+  "expect": { "failures": "none" },
+  "evidence_keys": ["signature_id", "signature_record", "model", "nonce_sha256", "attestation_scope", "verdict_authority"]
+}
