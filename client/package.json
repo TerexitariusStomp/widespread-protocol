@@ -1,0 +1,11 @@
+{
+  "name": "@widespread/bridge-client",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "Thin typed client for the Widespread bridge API — generated shape follows /api/openapi.json",
+  "main": "index.ts",
+  "exports": { ".": "./index.ts" },
+  "scripts": { "typecheck": "tsc -p tsconfig.json" },
+  "devDependencies": { "typescript": "^5.6.0", "@types/node": "^22.0.0" }
+}
