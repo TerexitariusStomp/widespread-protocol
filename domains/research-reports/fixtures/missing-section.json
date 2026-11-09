@@ -1,0 +1,8 @@
+{
+  "input": {
+    "market": { "id": "m-rr-1", "verification": { "class": "payer-accept", "params": { "required_sections": ["methodology"] } } },
+    "claim": { "ref": "inline:# Summary\njust a summary with enough words in it", "actor": "a" }
+  },
+  "mocks": {},
+  "expect": { "failures": "required section missing" }
+}

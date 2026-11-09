@@ -1,0 +1,12 @@
+name: research-reports
+version: 0.1.0
+evidence_class: payer-accept
+display: "Research / written deliverables"
+description: "Reports, analyses, documents: artifact resolves + content-hashed + structure params checked (min length, required sections/citations) — verdict quality stays the payer's."
+ref_format: "URL of the published document, or inline markdown/text as the ref body when prefixed 'inline:'"
+actor_binding: "caller-declared — recorded, not verified"
+env_required: []
+env_optional: []
+determinism: subjective      # structure is checkable; quality is the payer's call
+entry: index.ts
+author: TerexitariusStomp

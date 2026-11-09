@@ -1,0 +1,11 @@
+{
+  "desc": "inline report meets structure params",
+  "input": {
+    "market": { "id": "m-rr-1", "verification": { "class": "payer-accept",
+      "params": { "min_words": 20, "required_sections": ["summary", "methodology"], "min_citations": 2 } } },
+    "claim": { "ref": "inline:# Summary\nA long report with enough words to pass the minimum threshold easily and clearly.\n\n## Methodology\nSee [1] and https://example.com/src for sources.", "actor": "did:key:z" }
+  },
+  "mocks": {},
+  "expect": { "failures": "none" },
+  "evidence_keys": ["content_sha256", "word_count", "citation_count", "verdict_authority", "actor", "delivery"]
+}
