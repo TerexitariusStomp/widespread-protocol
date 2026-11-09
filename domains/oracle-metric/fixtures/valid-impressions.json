@@ -1,0 +1,14 @@
+{
+  "desc": "impressions ≥ threshold via metric endpoint",
+  "input": {
+    "market": { "id": "m-om-1", "created_at": 1730000000000,
+      "verification": { "class": "oracle-metric",
+        "params": { "field": "data.impressions", "min": 10000, "observed_field": "data.measured_at" } } },
+    "claim": { "ref": "https://metrics.example.com/t/abc", "actor": "agent-7" }
+  },
+  "mocks": {
+    "metrics.example.com/t/abc": { "json": { "data": { "impressions": 14200, "measured_at": "2025-11-09T12:00:00Z" } } }
+  },
+  "expect": { "failures": "none" },
+  "evidence_keys": ["metric_url_hash", "raw_sha256", "metric_field", "metric_value", "observed_at", "actor"]
+}

@@ -37,6 +37,19 @@ importers:
         specifier: ^5.6.0
         version: 5.9.3
 
+  domains/oracle-metric:
+    dependencies:
+      '@widespread/protocol-sdk':
+        specifier: workspace:*
+        version: link:../../sdk
+    devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.20.5
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.3
+
   domains/payer-accept:
     dependencies:
       '@widespread/protocol-sdk':

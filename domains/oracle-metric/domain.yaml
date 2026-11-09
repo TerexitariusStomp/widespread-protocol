@@ -1,0 +1,12 @@
+name: oracle-metric
+version: 0.1.0
+evidence_class: oracle-metric
+display: "Outcome-verified work via metric read"
+description: "Verifies outcome-bound work ('reach ≥N impressions', 'score ≥X') by reading a declared metric endpoint at claim time — the number the payer asked for, not the artifact."
+ref_format: "the metric endpoint URL that reports the outcome (any JSON API returning the numeric field)"
+actor_binding: "caller-declared — recorded; metric carries its own subject identity"
+env_required: []
+env_optional: [METRIC_BEARER_TOKEN]   # forwarded as Authorization when set
+determinism: oracle-read
+entry: index.ts
+author: TerexitariusStomp

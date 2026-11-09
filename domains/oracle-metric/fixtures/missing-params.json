@@ -1,0 +1,5 @@
+{
+  "input": { "market": { "id": "m-om-1" }, "claim": { "ref": "https://metrics.example.com/t/abc" } },
+  "mocks": {},
+  "expect": { "failures": "field" }
+}

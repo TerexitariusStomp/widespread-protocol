@@ -1,0 +1,11 @@
+{
+  "desc": "metric below declared minimum",
+  "input": {
+    "market": { "id": "m-om-1", "verification": { "class": "oracle-metric", "params": { "field": "views", "min": 10000 } } },
+    "claim": { "ref": "https://metrics.example.com/t/abc" }
+  },
+  "mocks": {
+    "metrics.example.com/t/abc": { "json": { "views": 120 } }
+  },
+  "expect": { "failures": "metric 120 < min 10000" }
+}
