@@ -1,0 +1,12 @@
+{
+  "desc": "URL artifact resolves, hashed, actor recorded",
+  "input": {
+    "market": { "id": "m-pa-1", "verification": { "class": "payer-accept", "params": { "word_count_min": 800 } } },
+    "claim": { "ref": "https://blog.example.com/agent-report", "actor": "did:key:z6Mk" }
+  },
+  "mocks": {
+    "blog.example.com/agent-report": { "text": "<html><body>the report body</body></html>" }
+  },
+  "expect": { "failures": "none" },
+  "evidence_keys": ["content_sha256", "url", "verdict_authority", "actor", "acceptance_params"]
+}

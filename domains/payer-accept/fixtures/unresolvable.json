@@ -1,0 +1,8 @@
+{
+  "input": {
+    "market": { "id": "m-pa-1" },
+    "claim": { "ref": "https://dead.example.com/gone", "actor": "a" }
+  },
+  "mocks": { "dead.example.com/gone": { "status": 404, "json": {} } },
+  "expect": { "failures": "not resolvable" }
+}

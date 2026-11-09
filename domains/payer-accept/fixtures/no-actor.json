@@ -1,0 +1,8 @@
+{
+  "input": {
+    "market": { "id": "m-pa-1" },
+    "claim": { "ref": "https://blog.example.com/x" }
+  },
+  "mocks": { "blog.example.com/x": { "text": "body" } },
+  "expect": { "failures": "claim.actor required" }
+}

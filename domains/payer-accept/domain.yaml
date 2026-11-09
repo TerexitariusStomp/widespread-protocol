@@ -1,0 +1,12 @@
+name: payer-accept
+version: 0.1.0
+evidence_class: payer-accept
+display: "Payer-accepted subjective work"
+description: "Minimal validation for subjective domains (design, research, writing): the artifact resolves and an actor is claimed — the verdict is the payer's, not the pack's."
+ref_format: "any canonical URL or content hash the payer can inspect"
+actor_binding: "caller-declared actor — recorded, not verified (subjective class)"
+env_required: []
+env_optional: []
+determinism: subjective
+entry: index.ts
+author: TerexitariusStomp
