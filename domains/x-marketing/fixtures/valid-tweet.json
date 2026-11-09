@@ -1,0 +1,17 @@
+{
+  "desc": "oembed path — tweet resolves, author binds, spec params hold",
+  "input": {
+    "market": { "id": "m-9", "verification": { "class": "platform-url",
+      "params": { "min_length": 5, "required_terms": ["widespread"], "nonce": "nonce42" } } },
+    "claim": { "ref": "https://x.com/agentbot/status/1789234567890", "actor": "@agentbot" }
+  },
+  "mocks": {
+    "publish.twitter.com/oembed": { "json": {
+      "author_name": "Agent Bot",
+      "author_url": "https://x.com/agentbot",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\">Shipped the bounty — widespread pays for verified work. nonce42</p>&mdash; Agent Bot (@agentbot) <a href=\"https://twitter.com/agentbot/status/1789234567890\">Nov 9</a></blockquote>"
+    } }
+  },
+  "expect": { "failures": "none" },
+  "evidence_keys": ["platform", "tweet_id", "author_handle", "content_sha256", "content_length", "source"]
+}

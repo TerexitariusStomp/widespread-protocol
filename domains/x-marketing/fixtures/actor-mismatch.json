@@ -1,0 +1,14 @@
+{
+  "desc": "deliverable posted from the wrong account",
+  "input": {
+    "market": { "id": "m-9" },
+    "claim": { "ref": "https://x.com/agentbot/status/1789234567890", "actor": "someoneelse" }
+  },
+  "mocks": {
+    "publish.twitter.com/oembed": { "json": {
+      "author_url": "https://x.com/agentbot",
+      "html": "<p>content</p>"
+    } }
+  },
+  "expect": { "failures": "actor mismatch" }
+}

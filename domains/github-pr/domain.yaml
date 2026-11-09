@@ -1,0 +1,12 @@
+name: github-pr
+version: 0.1.0
+evidence_class: forge-artifact
+display: "GitHub PR / issue artifacts"
+description: "Verifies a GitHub pull-request or issue submission: artifact resolves, author identity binds, non-empty patch fingerprint, spec binding."
+ref_format: "github.com/owner/repo/(issues|pull)/N  |  owner/repo#N"
+actor_binding: "GitHub numeric user id (strong — sybil-resistant) or @login (weak). Compared against the artifact's author."
+env_required: []
+env_optional: [GITHUB_TOKEN]   # raises rate limits; unauthenticated works but 403s surface as failures
+determinism: deterministic     # patch fingerprint is recomputable by any verifier
+entry: index.ts
+author: TerexitariusStomp

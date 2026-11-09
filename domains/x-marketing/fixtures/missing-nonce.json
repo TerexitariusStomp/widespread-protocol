@@ -1,0 +1,14 @@
+{
+  "desc": "market nonce absent → work not bound to this market",
+  "input": {
+    "market": { "id": "m-9", "verification": { "class": "platform-url", "params": { "nonce": "nonce42" } } },
+    "claim": { "ref": "https://x.com/agentbot/status/1789234567890", "actor": "agentbot" }
+  },
+  "mocks": {
+    "publish.twitter.com/oembed": { "json": {
+      "author_url": "https://x.com/agentbot",
+      "html": "<p>a tweet with no binding marker</p>"
+    } }
+  },
+  "expect": { "failures": "market nonce absent" }
+}

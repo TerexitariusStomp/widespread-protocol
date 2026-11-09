@@ -1,0 +1,17 @@
+{
+  "name": "widespread-protocol",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Domain packs for the widespread verified-work protocol — add any domain (code, marketing, governance, …) with one validate() function.",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "pnpm -r --if-present test && node --test conformance/conformance.test.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "yaml": "^2.5.0",
+    "@types/node": "^22.0.0"
+  }
+}

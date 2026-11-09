@@ -1,0 +1,12 @@
+name: snapshot-governance
+version: 0.1.0
+evidence_class: chain-state
+display: "Snapshot proposal outcomes"
+description: "Verifies governance work against Snapshot: proposal resolves, author binds, and declared outcome params (state, quorum, winning choice, space) hold — a deterministic public-state read."
+ref_format: "snapshot.box/#/<space>/proposal/<id> | snapshot.org/#/<space>/proposal/<id> | bare proposal id (0x…)"
+actor_binding: "proposal author's Ethereum address — claim.actor compared case-insensitively"
+env_required: []
+env_optional: []
+determinism: deterministic     # outcome is a public indexer read — recomputable by anyone
+entry: index.ts
+author: TerexitariusStomp

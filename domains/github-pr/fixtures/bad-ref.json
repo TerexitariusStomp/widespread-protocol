@@ -1,0 +1,9 @@
+{
+  "desc": "unparseable ref fails fast without platform calls",
+  "input": {
+    "market": { "id": "m-1" },
+    "claim": { "ref": "definitely not a ref" }
+  },
+  "mocks": {},
+  "expect": { "failures": "claim.ref must be" }
+}

@@ -1,0 +1,11 @@
+{
+  "desc": "proposal doesn't resolve",
+  "input": {
+    "market": { "id": "m-gov-1" },
+    "claim": { "ref": "0xdeadbeefcafe" }
+  },
+  "mocks": {
+    "hub.snapshot.org/graphql": { "json": { "data": { "proposal": null } } }
+  },
+  "expect": { "failures": "proposal not found" }
+}

@@ -1,0 +1,18 @@
+{
+  "desc": "closed proposal, quorum met, expected winner, author binds",
+  "input": {
+    "market": { "id": "m-gov-1", "verification": { "class": "chain-state",
+      "params": { "space": "aave.eth", "state": "closed", "min_scores_total": 50, "winning_choice": "Yes" } } },
+    "claim": { "ref": "https://snapshot.box/#/aave.eth/proposal/0xabc123def456", "actor": "0xAUTHOR" }
+  },
+  "mocks": {
+    "hub.snapshot.org/graphql": { "json": { "data": { "proposal": {
+      "id": "0xabc123def456", "title": "Fund the thing", "body": "Proposal text here",
+      "author": "0xauthor", "state": "closed", "space": { "id": "aave.eth" },
+      "choices": ["Yes", "No"], "scores": [100, 10], "scores_total": 110,
+      "quorum": 50, "created": 1700000000, "end": 1700100000
+    } } } }
+  },
+  "expect": { "failures": "none" },
+  "evidence_keys": ["platform", "proposal_id", "space", "state", "author", "scores_total", "winning_choice", "body_sha256"]
+}

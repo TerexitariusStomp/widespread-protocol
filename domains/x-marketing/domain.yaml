@@ -1,0 +1,12 @@
+name: x-marketing
+version: 0.1.0
+evidence_class: platform-url
+display: "X/Twitter published content"
+description: "Verifies a published tweet: it exists, its author binds to the claimed actor, text is content-hashed, and spec params (length, required terms, nonce) hold."
+ref_format: "x.com/<handle>/status/<id> | twitter.com/<handle>/status/<id> | bare status id"
+actor_binding: "tweet author's handle — claim.actor is the @handle the deliverable must be posted from"
+env_required: []
+env_optional: [X_BEARER_TOKEN]   # api.x.com v2 read; without it falls back to keyless oembed (no created_at)
+determinism: oracle-read       # trust anchor is the platform API; content hash makes the artifact re-verifiable
+entry: index.ts
+author: TerexitariusStomp

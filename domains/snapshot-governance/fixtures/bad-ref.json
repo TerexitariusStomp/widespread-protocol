@@ -1,0 +1,8 @@
+{
+  "input": {
+    "market": { "id": "m-gov-1" },
+    "claim": { "ref": "vote for me please" }
+  },
+  "mocks": {},
+  "expect": { "failures": "proposal URL or proposal id" }
+}

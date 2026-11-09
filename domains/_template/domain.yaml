@@ -1,0 +1,12 @@
+name: my-domain                # kebab-case, must match this directory name
+version: 0.1.0
+evidence_class: platform-url   # forge-artifact | platform-url | chain-state | oracle-metric | payer-accept
+display: "My Domain"
+description: "One line — what this pack verifies."
+ref_format: "what claim.ref looks like (e.g. 'platform.com/item/<id>')"
+actor_binding: "what claim.actor means and how it's verified (e.g. 'numeric platform user id')"
+env_required: []               # hard requirements — pack must fail closed if absent
+env_optional: []               # degrade gracefully when absent
+determinism: oracle-read       # deterministic | oracle-read | adjudicator | subjective
+entry: index.ts
+author: your-handle

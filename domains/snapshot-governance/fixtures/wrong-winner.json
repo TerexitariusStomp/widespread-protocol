@@ -1,0 +1,16 @@
+{
+  "desc": "spec requires Yes but No won",
+  "input": {
+    "market": { "id": "m-gov-1", "verification": { "class": "chain-state",
+      "params": { "winning_choice": "Yes" } } },
+    "claim": { "ref": "0xabc123def456" }
+  },
+  "mocks": {
+    "hub.snapshot.org/graphql": { "json": { "data": { "proposal": {
+      "id": "0xabc123def456", "body": "x", "author": "0xauthor", "state": "closed",
+      "space": { "id": "aave.eth" }, "choices": ["Yes", "No"], "scores": [10, 100],
+      "scores_total": 110, "quorum": 50
+    } } } }
+  },
+  "expect": { "failures": "winning choice is \"No\"" }
+}

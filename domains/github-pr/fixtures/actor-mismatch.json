@@ -1,0 +1,11 @@
+{
+  "desc": "claimed actor is not the artifact author",
+  "input": {
+    "market": { "id": "m-1" },
+    "claim": { "ref": "octo/demo#7", "actor": "99999" }
+  },
+  "mocks": {
+    "/repos/octo/demo/issues/7": { "json": { "number": 7, "state": "open", "user": { "id": 12345, "login": "alice" } } }
+  },
+  "expect": { "failures": "actor mismatch" }
+}

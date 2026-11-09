@@ -1,0 +1,15 @@
+{
+  "desc": "PR resolves, actor binds (numeric id), non-empty patch",
+  "input": {
+    "market": { "id": "m-1", "specHash": "sha256:abc" },
+    "claim": { "ref": "https://github.com/octo/demo/pull/12", "actor": "12345",
+               "evidence": { "specHash": "sha256:abc" } }
+  },
+  "mocks": {
+    "/repos/octo/demo/issues/12": { "json": { "number": 12, "state": "open", "user": { "id": 12345, "login": "alice" } } },
+    "/repos/octo/demo/pulls/12/files": { "json": [ { "filename": "src/a.ts", "status": "modified", "patch": "@@ -1 +1 @@\n-old\n+new" } ] },
+    "/repos/octo/demo/pulls/12": { "json": { "number": 12, "state": "open", "head": { "sha": "deadbeef" }, "user": { "id": 12345, "login": "alice" }, "additions": 1, "deletions": 1, "changed_files": 1 } }
+  },
+  "expect": { "failures": "none" },
+  "evidence_keys": ["forge", "forgeRef", "forgeUserId", "forgeLogin", "patch_fingerprint", "head_sha", "actor_binding"]
+}

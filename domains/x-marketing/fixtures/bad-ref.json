@@ -1,0 +1,8 @@
+{
+  "input": {
+    "market": { "id": "m-9" },
+    "claim": { "ref": "instagram.com/p/abc" }
+  },
+  "mocks": {},
+  "expect": { "failures": "tweet URL" }
+}

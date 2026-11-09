@@ -1,0 +1,11 @@
+{
+  "desc": "closed issue artifact reports state failure",
+  "input": {
+    "market": { "id": "m-1" },
+    "claim": { "ref": "octo/demo#3", "actor": "12345" }
+  },
+  "mocks": {
+    "/repos/octo/demo/issues/3": { "json": { "number": 3, "state": "closed", "user": { "id": 12345, "login": "alice" } } }
+  },
+  "expect": { "failures": "issue is closed" }
+}
