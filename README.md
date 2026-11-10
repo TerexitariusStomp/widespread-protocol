@@ -9,6 +9,15 @@ Code work already verifies (GitHub PRs, patch fingerprints). This repo is
 where every other domain gets added — marketing, governance, design,
 research, whatever a market can fund — with one `validate()` function.
 
+## Docs
+
+- [Architecture](docs/architecture.md) — layers, data flow, honest boundaries
+- [Domain packs](docs/domain-packs.md) — taxonomy, shipped packs, determinism
+- [API reference](docs/api.md) — endpoints, client SDK, webhooks
+- [Evidence classes](docs/evidence-classes.md) — verification strength model
+- [Integrating](docs/integrating.md) — agents, payers, protocols
+- [Disputes](docs/disputes.md) — escalation by evidence class
+
 ## The loop (domain-agnostic)
 
 ```
